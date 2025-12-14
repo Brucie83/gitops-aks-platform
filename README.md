@@ -102,13 +102,13 @@ ArgoCD automatically reconciles the cluster back to the previous stable state.
 
 ## Operational Rules
 
-❌ No kubectl apply for application resources
+- ❌ No kubectl apply for application resources
 
-✅ All changes must go through Git
+- ✅ All changes must go through Git
 
-✅ Rollbacks are Git-driven
+- ✅ Rollbacks are Git-driven
 
-✅ The cluster is treated as immutable
+- ✅ The cluster is treated as immutable
 
 ---
 
