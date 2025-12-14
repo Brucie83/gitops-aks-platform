@@ -8,7 +8,7 @@ It is intentionally focused on **deployment and reconciliation**, not on applica
 
 ---
 
-## 🎯 Purpose
+## Purpose
 
 The goal of this repository is to:
 
@@ -23,7 +23,7 @@ This repository **does not** build container images and **does not** run CI pipe
 
 ---
 
-## 🧩 Responsibilities Boundary
+## Responsibilities Boundary
 
 ### What this repository DOES
 
@@ -47,7 +47,7 @@ Those responsibilities belong to the **application repositories and their CI pip
 
 ---
 
-## 🏗 Repository Structure
+## Repository Structure
 
 ```text
 apps/
