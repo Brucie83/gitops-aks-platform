@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: container-health
+  labels:
+    app: container-health
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: container-health
+  template:
+    metadata:
+      labels:
+        app: container-health
+    spec:
+      containers:
+        - name: app
+          image: ghcr.io/brucie83/container-health:latest
+          ports:
+            - containerPort: 8000
+
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 10
+            periodSeconds: 20
+
+          resources:
+            requests:
+              cpu: "50m"
+              memory: "64Mi"
+            limits:
+              cpu: "250m"
+              memory: "256Mi"
