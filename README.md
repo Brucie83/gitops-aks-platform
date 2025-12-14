@@ -112,7 +112,7 @@ ArgoCD automatically reconciles the cluster back to the previous stable state.
 
 ---
 
-##Example Application
+## Example Application
 container-health
 
 - FastAPI-based health check service
