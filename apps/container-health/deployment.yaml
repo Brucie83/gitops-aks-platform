@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: ghcr.io/brucie83/container-health:latest
+          image: ghcr.io/brucie83/container-health:DNE
           ports:
             - containerPort: 8000
 
