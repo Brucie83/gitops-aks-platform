@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: container-health
+  namespace: container-health
   labels:
     app: container-health
 
