@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: container-health
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/Brucie83/gitops-aks-platform.git
+    targetRevision: main
+    path: ./apps/container-health
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: container-health
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
