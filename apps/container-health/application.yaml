@@ -9,11 +9,11 @@ spec:
   source:
     repoURL: https://github.com/Brucie83/gitops-aks-platform.git
     targetRevision: main
-    path: .
+    path: ./apps/container-health
 
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: container-health
 
   syncPolicy:
     automated:
