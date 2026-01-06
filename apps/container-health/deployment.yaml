@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: ghcr.io/brucie83/container-health:1.0.3
+          image: ghcr.io/brucie83/container-health:1.0.5
           ports:
             - containerPort: 8000
 
